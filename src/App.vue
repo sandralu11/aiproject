@@ -19,34 +19,11 @@ export default {
 </template>
 
 <style lang="scss">
-:root {
-  --bg: #020202;
-  --gray: #525252;
-  --l-gray: #f2f2f2;
-  --white: #ffffff;
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg);
-  font-family: "Noto Sans TC", sans-serif;
-  line-height: 1.5;
-  color: var(--white);
-}
-
-a {
-  display: block;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
-}
-.logo {
-  width: 245px;
-}
+@media (min-width: 768px) {}
 </style>

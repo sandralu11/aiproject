@@ -1,0 +1,106 @@
+@import './reset.css';
+
+:root {
+  --bg: #020202;
+  --gray: #525252;
+  --l-gray: #F2F2F2;
+  --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--white);
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fs-16 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.fs-20 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.fs-32 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.fs-48 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .l-fs-120 {
+    font-size: 120px;
+    font-weight: 900;
+  }
+
+  .l-fs-80 {
+    font-size: 80px;
+    font-weight: 900;
+  }
+
+  .l-fs-48 {
+    font-size: 48px;
+    font-weight: 900;
+  }
+
+  .l-fs-32 {
+    font-size: 32px;
+    font-weight: 900;
+  }
+}
+
+.py-120 {
+  padding: 100px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  width: 245px;
+}
+
+.bt-line {
+  border-bottom: 1px solid var(--white);
+}
+
+.btn {
+  color: var(--white);
+  background-color: var(--bg);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  font-size: 20px;
+}
