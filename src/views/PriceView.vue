@@ -1,8 +1,10 @@
 <script>
 import FAQ from "../components/FAQ.vue";
+import Tools from "../components/Tools.vue";
 export default {
   components: {
     FAQ,
+    Tools,
   },
 };
 </script>
@@ -56,6 +58,7 @@ export default {
       </div>
     </div>
   </div>
+  <Tools />
   <FAQ />
 </template>
 

@@ -1,16 +1,4 @@
-<script>
-import $ from "jquery"; //导入jquery
-$(".qa-item").click(function (e) {
-  //外誆顏色
-  $(this).toggleClass("active");
-  //＋出現跟消失
-  $(this).find(".add-icon").toggleClass("d-none");
-  //－出現跟消失
-  $(this).find(".remove-icon").toggleClass("d-block");
-  //Ｐ出現跟消失
-  $(this).find(".collapse-content p").toggleClass("show");
-});
-</script>
+<script></script>
 <template>
   <div class="fs-20 l-fs-32">常見問題</div>
   <div class="qa">
