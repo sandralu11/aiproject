@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jquery": "^3.7.0",
     "material-components-web": "^14.0.0",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0"

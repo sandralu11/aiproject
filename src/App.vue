@@ -22,8 +22,9 @@ export default {
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 8px;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 </style>

@@ -1,4 +1,4 @@
-<script >
+<script>
 import Banner from "../components/Banner.vue";
 import Service from "../components/Service.vue";
 export default {
@@ -7,7 +7,6 @@ export default {
     Service,
   },
 };
-
 </script>
 
 <template>
@@ -15,16 +14,20 @@ export default {
   <Service />
   <div class="swiper">
     <ul class="swiper-wrapper">
-      <li class="item swiper-slide" v-for="item in 3">
+      <li class="item" v-for="item in 3">
         <div class="star">★★★★★</div>
         <div>
-          作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王 提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
-          的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝 AI工具王 團隊的辛勤工作！
+          作為一家醫療器材公司，我們非常關注人工智能技術的應用，而 AI工具王
+          提供的 AI 模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
+          的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
+          AI工具王 團隊的辛勤工作！
         </div>
         <div class="personal-info">
           <span>
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
-              alt="photo">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
+              alt="photo"
+            />
           </span>
           <div class="info">
             <p>劉小姐</p>
