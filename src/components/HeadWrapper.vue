@@ -29,7 +29,7 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--white);
   position: relative;
-  max-width: 1280px;
+
 
   .navbar-btn {
     cursor: pointer;
