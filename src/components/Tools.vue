@@ -1,43 +1,57 @@
 <script></script>
 <template>
   <div class="api-wrapper">
-    <h2 class="l-fs-120 fs-32 center title">這些超酷的應用，都來自 AI工具王</h2>
-    <input type="text" class="search" placeholder="🔍 輸入關鍵字搜尋" />
+    <h2 class="l-fs-80 fs-32 center title">這些超酷的應用，都來自 AI工具王</h2>
 
-    <div class="filter mt-8">
-      <div class="dropdown">
-        <button type="button" class="dropdown-btn fs-16">
-          <span class="dropdown-btnText">篩選</span>
-          <span class="material-icons ml-12 fs-16"> expand_more </span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="mb-8">
-            <a href="#" class="new-to-old">由新到舊</a>
-          </li>
-          <li>
-            <a href="#" class="old-to-new">由舊到新</a>
-          </li>
-        </ul>
+    <input type="text" class="search" placeholder="輸入關鍵字搜尋" />
+    <div class="filter-wrapper mw1280">
+      <div class="mt-8 type">
+        <div class="dropdown">
+          <button type="button" class="dropdown-btn fs-16">
+            <span class="dropdown-btnText">篩選</span>
+            <i class='bx bxs-filter-alt'></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="mb-8">
+              <a href="#" class="new-to-old">AI模型</a>
+            </li>
+            <li>
+              <a href="#" class="old-to-new">類型</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="filter mt-8">
-      <div class="dropdown">
-        <button type="button" class="dropdown-btn fs-16">
-          <span class="dropdown-btnText">由新到舊</span>
-          <span class="material-icons ml-12 fs-16"> expand_more </span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="mb-8">
-            <a href="#" class="new-to-old">由新到舊</a>
-          </li>
-          <li>
-            <a href="#" class="old-to-new">由舊到新</a>
-          </li>
-        </ul>
+      <div class="tag">
+        <span>全部</span>
+        <span>問答服務</span>
+        <span>虛擬客服</span>
+        <span>生活應用</span>
+        <span>程式知識</span>
+        <span>翻譯助手</span>
+        <span>行銷文案</span>
       </div>
+      <div class="mt-8 new">
+        <div class="dropdown">
+          <button type="button" class="dropdown-btn fs-16">
+            <span class="dropdown-btnText">由新到舊</span>
+            <i class='bx bxs-chevron-down'></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="mb-8">
+              <a href="#" class="new-to-old">由新到舊</a>
+            </li>
+            <li>
+              <a href="#" class="old-to-new">由舊到新</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
     </div>
 
-    <div class="wrapper">
+
+    <div class="card-wrapper mw1280">
       <div class="card">
         <div class="img-radius img-url1"></div>
         <div class="container">
@@ -143,9 +157,11 @@
   background-color: var(--white);
   padding: 150px 0;
   color: var(--bg);
+
   .title {
     padding: 50px;
   }
+
   .search {
     background-color: var(--l-gray);
     border: 1px solid var(--l-gray);
@@ -156,7 +172,17 @@
   }
 }
 
-.wrapper {
+.card-wrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      width: 31%;
+    }
+  }
+
+
   .img-url1 {
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool1.png?raw=true);
   }
@@ -223,47 +249,105 @@
     border: 1px solid var(--l-gray);
     border-radius: 0 0 15px 15px;
   }
+
+
 }
 
-.filter {
-  display: flex;
-  justify-content: flex-end;
-}
+.filter-wrapper {
+  display: grid;
+  grid-gap: 10px;
 
-.dropdown {
-  position: relative;
-}
+  .type {
+    grid-column: 1;
+    grid-row: 1;
 
-.dropdown-btn {
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #f2f2f2;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 32px;
-  padding-bottom: 20px;
-  border-radius: 16px;
-  &:hover {
-    border-color: #000000;
   }
-}
 
-.dropdown-menu {
-  position: absolute;
-  right: 0;
-  display: none;
-  margin-top: 4px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 20px 0;
-  border-radius: 16px;
-  a {
-    padding: 4px 40px;
-    &:hover {
-      background-color: #f2f2f2;
+  .new {
+    grid-column: 2;
+    grid-row: 1;
+
+  }
+
+  .tag {
+    grid-column: 1/3;
+    grid-row: 2;
+    overflow-x: scroll;
+    color: var(--gray);
+    padding: 20px;
+
+    span {
+      margin: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        color: var(--bg);
+        background-color: var(--l-gray);
+        border-radius: 15px;
+        padding: 10px;
+      }
     }
-    .dropdown-menu.show {
-      display: block;
+  }
+
+  @media (min-width: 768px) {
+    .type {
+      grid-column: 1;
+    }
+
+    .tag {
+      grid-column: 3/5;
+      grid-row: 1;
+
+    }
+
+    .new {
+      grid-column: 6;
+    }
+
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+
+    &:hover {
+      border-color: #000000;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    display: none;
+    margin-top: 4px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+    border-radius: 16px;
+
+    a {
+      padding: 4px 40px;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+
+      .dropdown-menu.show {
+        display: block;
+      }
     }
   }
 }

@@ -1,18 +1,15 @@
 <template>
-  <div class="navbar">
+  <div class="navbar mw1280">
     <a href="#">
-      <img
-        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
-        alt="logo"
-        class="logo"
-      />
+      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo"
+        class="logo" />
     </a>
     <button type="button" class="navbar-btn">
-      <span class="material-icons menu"> menu </span>
+      <i class='bx bx-menu'></i>
     </button>
     <ul class="navbar-menu">
-      <li><a href="#" class="me-20">首頁</a></li>
-      <li><a href="#" class="">定價</a></li>
+      <li><a href="/" class="p-20">首頁</a></li>
+      <li><a href="/price" class="p-20">定價</a></li>
     </ul>
     <div class="navbar-collapse">
       <div class="collapse">
@@ -32,6 +29,7 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--white);
   position: relative;
+  max-width: 1280px;
 
   .navbar-btn {
     cursor: pointer;
@@ -42,6 +40,10 @@
     &:hover {
       transform: scale(1.1);
     }
+
+    .bx-menu {
+      font-size: 30px;
+    }
   }
 
   .navbar-menu {
@@ -49,8 +51,6 @@
   }
 
   .navbar-collapse {
-    display: none;
-    /* 在電腦版時不顯示 */
     position: absolute;
     top: 80px;
     width: 100%;
@@ -74,6 +74,21 @@
 
   .show {
     display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+
+    .navbar-btn,
+    .navbar-collapse {
+      display: none;
+    }
+
+    .navbar-menu {
+      display: flex;
+
+    }
   }
 }
 </style>

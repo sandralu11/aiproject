@@ -1,5 +1,5 @@
 <template>
-  <div class="banner">
+  <div class="banner mw1280">
     <div class="fs-48 l-fs-120">
       <p>透過</p>
       <p>AI 工具王的</p>

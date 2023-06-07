@@ -1,10 +1,14 @@
 <script>
 import Banner from "../components/Banner.vue";
 import Service from "../components/Service.vue";
+import Tools from "../components/Tools.vue";
+import Company from "../components/Company.vue";
 export default {
   components: {
     Banner,
     Service,
+    Tools,
+    Company,
   },
 };
 </script>
@@ -12,7 +16,8 @@ export default {
 <template>
   <Banner />
   <Service />
-  <div class="swiper">
+  <Company />
+  <div class="swiper mw1280">
     <ul class="swiper-wrapper">
       <li class="item" v-for="item in 3">
         <div class="star">★★★★★</div>
@@ -24,10 +29,8 @@ export default {
         </div>
         <div class="personal-info">
           <span>
-            <img
-              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
-              alt="photo"
-            />
+            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/avatar1.png?raw=true"
+              alt="photo" />
           </span>
           <div class="info">
             <p>劉小姐</p>
@@ -38,7 +41,8 @@ export default {
     </ul>
     <div class="swiper-pagination"></div>
   </div>
-  <div class="bt-line py-120">
+  <Tools />
+  <div class="bt-line py-120 mw1280 ">
     <div class="center fs-32 l-fs-48">現在就來建立屬於你的服務吧</div>
     <div class="center">
       <button class="btn">開始使用↗</button>
@@ -66,6 +70,10 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .swiper {
+    padding-bottom: 100px;
+  }
+
   .swiper-wrapper {
     display: flex;
 

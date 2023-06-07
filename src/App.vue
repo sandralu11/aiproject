@@ -20,11 +20,14 @@ export default {
 
 <style lang="scss">
 #app {
-  max-width: 1280px;
+
   margin: 0 auto;
   padding: 8px;
 }
 
 @media (min-width: 768px) {
+  #app {
+    padding: 0px;
+  }
 }
 </style>

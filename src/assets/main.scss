@@ -22,6 +22,11 @@ body {
   color: var(--white);
 }
 
+.mw1280 {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 ul,
 li {
   list-style: none;
@@ -62,6 +67,30 @@ a {
   font-weight: 900;
 }
 
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.ml-12 {
+  margin-left: 12px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.d-flex {
+  display: flex;
+}
+
 @media (min-width: 768px) {
   .l-fs-120 {
     font-size: 120px;
@@ -81,6 +110,10 @@ a {
   .l-fs-32 {
     font-size: 32px;
     font-weight: 900;
+  }
+
+  .p-20 {
+    padding: 20px;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="service">
+  <div class="service mw1280 ">
     <div class="info">
       <div class="fs-20 l-fs-32 ">我們的服務</div>
       <div class="fs-32 l-fs-48">
@@ -10,21 +10,21 @@
     <div class="list">
       <ul class="list-item">
         <li>
-          <i class='bx bx-popsicle'></i>
+          <i class='bx bxs-zap'></i>
         </li>
         <li class="fs-32">快速</li>
         <li class="fs-16">我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</li>
       </ul>
       <ul class="list-item">
         <li>
-          <i class='bx bx-popsicle'></i>
+          <i class='bx bxs-star'></i>
         </li>
         <li class="fs-32">靈活</li>
         <li class="fs-16">我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</li>
       </ul>
       <ul class="list-item">
         <li>
-          <i class='bx bx-popsicle'></i>
+          <i class='bx bxs-add-to-queue'></i>
         </li>
         <li class="fs-32">擴充</li>
         <li class="fs-16">我們的服務支持多種擴充選項，可以滿足您的不斷增長的 AI 需求。</li>
@@ -41,7 +41,7 @@
     padding: 50px 30px;
     margin: 10px 0;
 
-    .material-icons {
+    .bx {
       font-size: 50px;
     }
   }

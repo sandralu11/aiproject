@@ -9,7 +9,7 @@ export default {
 };
 </script>
 <template>
-  <div class="banner">
+  <div class="banner mw1280">
     <div>
       <p class="fs-48 l-fs-120">用多少，</p>
       <p class="fs-48 l-fs-120">付多少。</p>
@@ -23,7 +23,7 @@ export default {
       <img src="../assets/motin.png" alt="down" />
     </div>
   </div>
-  <div class="pricing">
+  <div class="pricing mw1280">
     <h2 class="fs-20 l-fs-32 py-20">定價</h2>
     <div class="wrap">
       <div class="card" v-for="card in 4">
@@ -44,12 +44,12 @@ export default {
       </div>
     </div>
   </div>
-  <div class="regulations py-120">
-    <div>
+  <div class="regulations py-120 mw1280">
+    <div class="title">
       <h2 class="fs-20 l-fs-32 py-20">使用規範</h2>
     </div>
 
-    <div>
+    <div class="items">
       <div class="item" v-for="item in 3">
         <h3 class="fs-32 l-fs-48 py-20">守法</h3>
         <p class="fs-16 py-20">
@@ -68,11 +68,13 @@ export default {
     width: 100%;
   }
 }
+
 .sub-title {
   width: 80%;
   float: right;
   margin: 20px 0px 200px;
 }
+
 .card {
   border: 1px solid var(--gray);
   border-radius: 16px;
@@ -81,17 +83,21 @@ export default {
   .introduce {
     padding: 20px 10px 50px;
   }
+
   ul {
     padding-left: 30px;
   }
+
   li {
     list-style-type: disc;
   }
+
   .price-wrap {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--gray);
     padding: 20px;
+
     .price {
       .token {
         color: var(--gray);
@@ -99,6 +105,7 @@ export default {
     }
   }
 }
+
 .regulations {
   .item {
     border-bottom: 1px solid var(--gray);
@@ -109,14 +116,23 @@ export default {
   .wrap {
     display: flex;
     flex-wrap: wrap;
+
     .card {
       width: 48%;
       margin: 5px;
     }
   }
+
   .regulations {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+
+    .title {
+      grid-column: 1;
+    }
+
+    .items {
+      grid-column: 2/4;
+    }
   }
 }
 </style>

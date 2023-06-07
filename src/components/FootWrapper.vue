@@ -1,22 +1,25 @@
 <template>
-  <div class="nav bt-line">
-    <a href="#">
-      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo"
-        class="logo" />
-    </a>
-    <ul>
-      <li><a href="#" class="l-fs-80 fs-48 ">首頁</a></li>
-      <li><a href="#" class="l-fs-80 fs-48 ">定價</a></li>
-    </ul>
-  </div>
-  <div class="footer">
-    <div class="copy-right">AI工具王 © 2023</div>
-    <div class="social">
-      <span>Facebook</span>
-      <span>Twitter</span>
-      <span>Instagram</span>
+  <div class="mw1280">
+
+    <div class="nav bt-line">
+      <a href="#">
+        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
+          alt="logo" class="logo" />
+      </a>
+      <ul>
+        <li><a href="#" class="l-fs-80 fs-48 ">首頁</a></li>
+        <li><a href="#" class="l-fs-80 fs-48 ">定價</a></li>
+      </ul>
     </div>
-    <div id="scrollToTop" class="top">Back to top ↑</div>
+    <div class="footer">
+      <div class="copy-right">AI工具王 © 2023</div>
+      <div class="social">
+        <span>Facebook</span>
+        <span>Twitter</span>
+        <span>Instagram</span>
+      </div>
+      <div id="scrollToTop" class="top">Back to top ↑</div>
+    </div>
   </div>
 </template>
 

@@ -1,75 +1,58 @@
 <script></script>
 <template>
-  <div class="fs-20 l-fs-32">常見問題</div>
-  <div class="qa">
-    <ul class="qa-list mt-8">
-      <li class="mb-16">
-        <a href="#" class="qa-item">
-          <div class="d-flex">
-            <div class="collapse-state">
-              <span class="material-icons add-icon"> add </span>
-              <span class="material-icons remove-icon d-none"> remove </span>
+  <div class="mw1280 faq py-120">
+    <div class="fs-20 l-fs-32 title">常見問題</div>
+    <div class="qa">
+      <ul class="qa-list mt-8">
+        <li class="mb-16">
+          <a href="#" class="qa-item">
+            <div class="d-flex">
+              <div class="collapse-state">
+                <i class='bx bx-plus'></i>
+                <i class='bx bx-minus d-none'></i>
+              </div>
+              <div class="collapse-content ml-20">
+                <h3>如何選擇適合的AI模型？</h3>
+                <p class="d-none">content</p>
+              </div>
             </div>
-            <div class="collapse-content ml-20">
-              <h3>如何選擇適合的AI模型？</h3>
-              <p class="d-none">content</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="qa-item">
+            <div class="d-flex">
+              <div class="collapse-state">
+
+                <i class='bx bx-plus'></i>
+                <i class='bx bx-minus d-none'></i>
+              </div>
+              <div class="collapse-content ml-20">
+                <h3>租用模型的費用是如何計算的？</h3>
+                <p class="d-none">content</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="qa-item">
-          <div class="d-flex">
-            <div class="collapse-state">
-              <span class="material-icons add-icon"> add </span>
-              <span class="material-icons remove-icon d-none"> remove </span>
-            </div>
-            <div class="collapse-content ml-20">
-              <h3>租用模型的費用是如何計算的？</h3>
-              <p class="d-none">content</p>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.fs-normal {
-  font-size: 16px;
+@media (min-width: 768px) {
+  .faq {
+    display: grid;
+
+    .title {
+      grid-column: 1;
+    }
+
+    .qa {
+      grid-column: 2/4;
+    }
+  }
 }
 
-.mb-8 {
-  margin-bottom: 8px;
-}
-
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.ml-12 {
-  margin-left: 12px;
-}
-
-.ml-20 {
-  margin-left: 20px;
-}
-
-.mt-8 {
-  margin-top: 8px;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* 常見問題區塊 */
 .d-none {
   display: none;
 }
