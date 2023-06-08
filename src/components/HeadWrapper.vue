@@ -12,26 +12,23 @@ export default {
 <template>
   <div class="navbar mw1280">
     <a href="#">
-      <img
-        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
-        alt="logo"
-        class="logo"
-      />
+      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo"
+        class="logo" />
     </a>
     <div @click="btn = !btn" class="navbar-btn">
       <i class="bx bx-menu"></i>
     </div>
 
     <ul class="navbar-menu">
-      <li><a href="/" class="p-20">首頁</a></li>
-      <li><a href="/price" class="p-20">定價</a></li>
+      <li><router-link to="/" class="p-20">首頁</router-link></li>
+      <li><router-link to="/price" class="p-20">定價</router-link></li>
     </ul>
 
     <div class="navbar-collapse" :class="{ show: btn }">
       <div class="collapse">
         <ul>
-          <li><a href="#" class="me-20">首頁</a></li>
-          <li><a href="#" class="">定價</a></li>
+          <li><router-link to="/">首頁</router-link></li>
+          <li><router-link to="/price">定價</router-link></li>
         </ul>
       </div>
     </div>
@@ -80,6 +77,7 @@ export default {
       line-height: 1.2;
       margin: 4px 0;
     }
+
     .collapse {
       display: flex;
       align-items: center;
@@ -94,10 +92,12 @@ export default {
 
 @media (min-width: 768px) {
   .navbar {
+
     .navbar-btn,
     .navbar-collapse {
       display: none;
     }
+
     .navbar-menu {
       display: flex;
     }

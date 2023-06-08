@@ -7,8 +7,9 @@
           alt="logo" class="logo" />
       </a>
       <ul>
-        <li><a href="#" class="l-fs-80 fs-48 ">首頁</a></li>
-        <li><a href="#" class="l-fs-80 fs-48 ">定價</a></li>
+        <li><router-link to="/" class="l-fs-80 fs-48 ">首頁</router-link></li>
+        <li><router-link to="/price" class="l-fs-80 fs-48 ">定價</router-link></li>
+
       </ul>
     </div>
     <div class="footer">
