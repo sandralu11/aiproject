@@ -9,17 +9,45 @@
     </div>
     <button class="btn">開始使用</button>
     <div class="down">
-      <img src="../assets/motin.png" alt="down">
+      <div>
+        <img src="../assets/arrow.png" alt="down" class="a-one arrow" />
+      </div>
+      <div>
+        <img src="../assets/arrow.png" alt="down" class="a-two arrow" />
+      </div>
+      <div>
+        <img src="../assets/arrow.png" alt="down" class="a-three arrow" />
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .down {
-  margin: 100px 0px 20px;
-
+  margin: 120px 20px;
+  display: flex;
+  justify-content: end;
   img {
     width: 100%;
+  }
+  .arrow {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+  }
+  .a-two {
+    animation-delay: 0.3s;
+  }
+  .a-three {
+    animation-delay: 0.5s;
+  }
+  @keyframes move {
+    to {
+      top: 200px;
+    }
   }
 }
 

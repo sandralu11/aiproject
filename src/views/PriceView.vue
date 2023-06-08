@@ -19,11 +19,19 @@ export default {
         我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
       </p>
     </div>
-    <div class="down">
-      <img src="../assets/motin.png" alt="down" />
+  </div>
+  <div class="down">
+    <div>
+      <img src="../assets/arrow.png" alt="down" class="a-one arrow" />
+    </div>
+    <div>
+      <img src="../assets/arrow.png" alt="down" class="a-two arrow" />
+    </div>
+    <div>
+      <img src="../assets/arrow.png" alt="down" class="a-three arrow" />
     </div>
   </div>
-  <div class="pricing mw1280">
+  <div class="pricing mw1280 py-120">
     <h2 class="fs-20 l-fs-32 py-20">定價</h2>
     <div class="wrap">
       <div class="card" v-for="card in 4">
@@ -64,8 +72,29 @@ export default {
 
 <style lang="scss" scoped>
 .down {
+  padding: 120px 0;
+  display: flex;
   img {
-    width: 100%;
+    width: 120px;
+  }
+  .arrow {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+  }
+  .a-two {
+    animation-delay: 0.3s;
+  }
+  .a-three {
+    animation-delay: 0.5s;
+  }
+  @keyframes move {
+    to {
+      top: 200px;
+    }
   }
 }
 
@@ -113,6 +142,12 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .down {
+    margin: 120px;
+    img {
+      width: 270px;
+    }
+  }
   .wrap {
     display: flex;
     flex-wrap: wrap;

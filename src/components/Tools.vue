@@ -1,21 +1,23 @@
 <script setup>
-import useWorks from '../composables/useWorks.js'
-
+import useWorks from "../composables/useWorks.js";
 
 const { data, loading, reload } = useWorks();
-
 </script>
 <template>
   <div class="api-wrapper">
-    <h2 class="l-fs-80 fs-32 center title" @click="reload">這些超酷的應用，都來自 AI工具王</h2>
+    <h2 class="l-fs-80 fs-32 center title" @click="reload">
+      這些超酷的應用，都來自 AI工具王
+    </h2>
+    <div class="mw1280">
+      <input type="text" class="search" placeholder="輸入關鍵字搜尋" />
+    </div>
 
-    <input type="text" class="search" placeholder="輸入關鍵字搜尋" />
     <div class="filter-wrapper mw1280">
       <div class="mt-8 type">
         <div class="dropdown">
           <button type="button" class="dropdown-btn fs-16">
             <span class="dropdown-btnText">篩選</span>
-            <i class='bx bxs-filter-alt'></i>
+            <i class="bx bxs-filter-alt"></i>
           </button>
           <ul class="dropdown-menu">
             <li class="mb-8">
@@ -28,19 +30,21 @@ const { data, loading, reload } = useWorks();
         </div>
       </div>
       <div class="tag">
-        <span>全部</span>
-        <span>問答服務</span>
-        <span>虛擬客服</span>
-        <span>生活應用</span>
-        <span>程式知識</span>
-        <span>翻譯助手</span>
-        <span>行銷文案</span>
+        <div class="scroll-box">
+          <span>全部</span>
+          <span>問答服務</span>
+          <span>虛擬客服</span>
+          <span>生活應用</span>
+          <span>程式知識</span>
+          <span>翻譯助手</span>
+          <span>行銷文案</span>
+        </div>
       </div>
       <div class="mt-8 new">
         <div class="dropdown">
           <button type="button" class="dropdown-btn fs-16">
             <span class="dropdown-btnText">由新到舊</span>
-            <i class='bx bxs-chevron-down'></i>
+            <i class="bx bxs-chevron-down"></i>
           </button>
           <ul class="dropdown-menu">
             <li class="mb-8">
@@ -52,15 +56,12 @@ const { data, loading, reload } = useWorks();
           </ul>
         </div>
       </div>
-
-
     </div>
-
 
     <div v-if="loading"></div>
     <div v-else class="card-wrapper mw1280">
       <div class="card" v-for="card in data.ai_works.data">
-        <img :src="card.imageUrl" alt="img" class="img-radius">
+        <img :src="card.imageUrl" alt="img" class="img-radius" />
         <div class="container">
           <h3 class="card-title font-bold">{{ card.title }}</h3>
           <p class="info p-20-30">
@@ -72,7 +73,9 @@ const { data, loading, reload } = useWorks();
           </div>
           <div class="between p-20-30 line-top">
             <span>#{{ card.model }}</span>
-            <a :href="card.link" class="share"><i class='bx bxs-share-alt '></i></a>
+            <a :href="card.link" class="share"
+              ><i class="bx bxs-share-alt"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -95,9 +98,9 @@ const { data, loading, reload } = useWorks();
     background-color: var(--l-gray);
     border: 1px solid var(--l-gray);
     padding: 20px;
-    margin: 0 5%;
     width: 90%;
     border-radius: 16px;
+    margin: 5%;
   }
 }
 
@@ -158,8 +161,9 @@ const { data, loading, reload } = useWorks();
     border: 1px solid var(--l-gray);
     border-radius: 0 0 15px 15px;
   }
-
-
+  .search {
+    width: 100%;
+  }
 }
 
 .filter-wrapper {
@@ -169,21 +173,22 @@ const { data, loading, reload } = useWorks();
   .type {
     grid-column: 1;
     grid-row: 1;
-
   }
 
   .new {
     grid-column: 2;
     grid-row: 1;
-
   }
 
   .tag {
     grid-column: 1/3;
     grid-row: 2;
-    overflow-x: scroll;
+    overflow-x: auto;
     color: var(--gray);
     padding: 20px;
+    .scroll-box {
+      width: 600px;
+    }
 
     span {
       margin: 10px;
@@ -209,13 +214,11 @@ const { data, loading, reload } = useWorks();
     .tag {
       grid-column: 3/5;
       grid-row: 1;
-
     }
 
     .new {
       grid-column: 6;
     }
-
   }
 
   .dropdown {

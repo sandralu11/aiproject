@@ -1,17 +1,33 @@
+<script>
+import { ref } from "vue";
+export default {
+  setup() {
+    const btn = ref(false);
+    return {
+      btn,
+    };
+  },
+};
+</script>
 <template>
   <div class="navbar mw1280">
     <a href="#">
-      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo"
-        class="logo" />
+      <img
+        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true"
+        alt="logo"
+        class="logo"
+      />
     </a>
-    <button type="button" class="navbar-btn">
-      <i class='bx bx-menu'></i>
-    </button>
+    <div @click="btn = !btn" class="navbar-btn">
+      <i class="bx bx-menu"></i>
+    </div>
+
     <ul class="navbar-menu">
       <li><a href="/" class="p-20">首頁</a></li>
       <li><a href="/price" class="p-20">定價</a></li>
     </ul>
-    <div class="navbar-collapse">
+
+    <div class="navbar-collapse" :class="{ show: btn }">
       <div class="collapse">
         <ul>
           <li><a href="#" class="me-20">首頁</a></li>
@@ -29,7 +45,6 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--white);
   position: relative;
-
 
   .navbar-btn {
     cursor: pointer;
@@ -51,6 +66,7 @@
   }
 
   .navbar-collapse {
+    display: none;
     position: absolute;
     top: 80px;
     width: 100%;
@@ -64,7 +80,6 @@
       line-height: 1.2;
       margin: 4px 0;
     }
-
     .collapse {
       display: flex;
       align-items: center;
@@ -79,15 +94,12 @@
 
 @media (min-width: 768px) {
   .navbar {
-
     .navbar-btn,
     .navbar-collapse {
       display: none;
     }
-
     .navbar-menu {
       display: flex;
-
     }
   }
 }

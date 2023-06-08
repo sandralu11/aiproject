@@ -1,69 +1,99 @@
 <script></script>
 <template>
   <div class="mw1280 py-120">
-    <div class="fs-24 l-fs-32 py-20">來自合作夥伴</div>
+    <div class="fs-20 l-fs-32 py-20">來自合作夥伴</div>
     <ul class="enterprise mb-20 mb-md-12">
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise4.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise5.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise6.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise7.png?raw=true"
+          alt=""
+        />
       </li>
     </ul>
     <ul class="enterprise mb-160 mb-md-48">
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise8.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise9.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise11.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise12.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise1.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise2.png?raw=true"
+          alt=""
+        />
       </li>
       <li>
-        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=trueg"
-          alt="">
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/enterprise3.png?raw=trueg"
+          alt=""
+        />
       </li>
     </ul>
   </div>
