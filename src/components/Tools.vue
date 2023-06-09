@@ -1,7 +1,9 @@
 <script setup>
 import useWorks from "../composables/useWorks.js";
-
+import { ref } from "vue";
 const { data, loading, reload } = useWorks();
+const isFilter = ref(false);
+const isOpen = ref(false);
 </script>
 <template>
   <div class="api-wrapper">
@@ -11,20 +13,21 @@ const { data, loading, reload } = useWorks();
     <div class="mw1280">
       <input type="text" class="search" placeholder="輸入關鍵字搜尋" />
     </div>
-
-    <div class="filter-wrapper mw1280">
+    <div v-if="loading"></div>
+    <div v-else class="filter-wrapper mw1280">
       <div class="mt-8 type">
         <div class="dropdown">
-          <button type="button" class="dropdown-btn fs-16">
+          <button
+            type="button"
+            class="dropdown-btn fs-16"
+            @click="isFilter = !isFilter"
+          >
             <span class="dropdown-btnText">篩選</span>
             <i class="bx bxs-filter-alt"></i>
           </button>
-          <ul class="dropdown-menu">
-            <li class="mb-8">
-              <a href="#" class="new-to-old">AI模型</a>
-            </li>
-            <li>
-              <a href="#" class="old-to-new">類型</a>
+          <ul class="dropdown-menu" :class="{ show: isFilter }">
+            <li class="mb-8" v-for="Ids in data.ai_works.data">
+              <div class="new-to-old drop-btn mb-8">{{ Ids.discordId }}</div>
             </li>
           </ul>
         </div>
@@ -42,16 +45,25 @@ const { data, loading, reload } = useWorks();
       </div>
       <div class="mt-8 new">
         <div class="dropdown">
-          <button type="button" class="dropdown-btn fs-16">
-            <span class="dropdown-btnText">由新到舊</span>
+          <button
+            type="button"
+            class="dropdown-btn fs-16"
+            @click="isOpen = !isOpen"
+          >
+            <span class="dropdown-btnText" v-if="sort">由新到舊</span>
+            <span class="dropdown-btnText" v-else>由舊到新</span>
             <i class="bx bxs-chevron-down"></i>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" :class="{ show: isOpen }">
             <li class="mb-8">
-              <a href="#" class="new-to-old">由新到舊</a>
+              <div class="new-to-old drop-btn" @click="sort = true">
+                由新到舊
+              </div>
             </li>
             <li>
-              <a href="#" class="old-to-new">由舊到新</a>
+              <div class="old-to-new drop-btn" @click="sort = false">
+                由舊到新
+              </div>
             </li>
           </ul>
         </div>
@@ -61,7 +73,9 @@ const { data, loading, reload } = useWorks();
     <div v-if="loading"></div>
     <div v-else class="card-wrapper mw1280">
       <div class="card" v-for="card in data.ai_works.data">
-        <img :src="card.imageUrl" alt="img" class="img-radius" />
+        <div class="pic">
+          <img :src="card.imageUrl" alt="img" class="img-radius" />
+        </div>
         <div class="container">
           <h3 class="card-title font-bold">{{ card.title }}</h3>
           <p class="info p-20-30">
@@ -80,6 +94,12 @@ const { data, loading, reload } = useWorks();
         </div>
       </div>
     </div>
+    <ul class="pagination mw1280">
+      <li><a href="#">1</a></li>
+      <li><a class="active" href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">></a></li>
+    </ul>
   </div>
 </template>
 
@@ -101,6 +121,43 @@ const { data, loading, reload } = useWorks();
     width: 90%;
     border-radius: 16px;
     margin: 5%;
+  }
+  .pic {
+    overflow: hidden;
+  }
+  img {
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+  }
+  img:hover {
+    transform: scale(1.2, 1.2);
+
+    overflow: hidden;
+  }
+  ul.pagination {
+    display: flex;
+    justify-content: end;
+    padding: 50px 10px;
+    li {
+      display: inline;
+      a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  ul.pagination li a.active {
+    background-color: var(--bg);
+    color: white;
+    border-radius: 5px;
+  }
+
+  ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
   }
 }
 
@@ -235,32 +292,31 @@ const { data, loading, reload } = useWorks();
     padding-right: 32px;
     padding-bottom: 20px;
     border-radius: 16px;
-
+    cursor: pointer;
     &:hover {
       border-color: #000000;
     }
   }
 
   .dropdown-menu {
-    position: absolute;
-    right: 0;
     display: none;
+    z-index: 10;
+    position: absolute;
+    right: 1;
     margin-top: 4px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 20px 0;
+    padding: 30px;
     border-radius: 16px;
-
-    a {
-      padding: 4px 40px;
-
+    background-color: var(--white);
+    .drop-btn {
       &:hover {
-        background-color: #f2f2f2;
-      }
-
-      .dropdown-menu.show {
-        display: block;
+        cursor: pointer;
+        background-color: var(--l-gray);
       }
     }
+  }
+  .show {
+    display: block;
   }
 }
 </style>
