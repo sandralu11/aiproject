@@ -10,7 +10,7 @@ export default {
 };
 </script>
 <template>
-  <div class="navbar mw1280">
+  <div class="navbar mw1280" id="gotop">
     <a href="#">
       <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/logo.png?raw=true" alt="logo"
         class="logo" />

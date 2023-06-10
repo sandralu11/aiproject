@@ -18,7 +18,7 @@ export default {
   <Service />
   <Company />
   <div class="swiper mw1280">
-    <ul class="swiper-wrapper">
+    <ul class="swiper-wrapper mandatory-scroll-snapping container">
       <li class="item" v-for="item in 3">
         <div class="star">★★★★★</div>
         <div>
@@ -45,7 +45,7 @@ export default {
   <div class="bt-line py-120 mw1280 ">
     <div class="center fs-32 l-fs-48">現在就來建立屬於你的服務吧</div>
     <div class="center">
-      <button class="btn">開始使用↗</button>
+      <router-link to="/price" class="d-ib btn">開始使用↗</router-link>
     </div>
   </div>
 </template>
@@ -69,6 +69,10 @@ export default {
   }
 }
 
+.d-ib {
+  display: inline-block;
+}
+
 @media (min-width: 768px) {
   .swiper {
     padding-bottom: 100px;
@@ -79,6 +83,29 @@ export default {
 
     .item {
       margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    overflow: auto;
+    outline: 1px dashed lightgray;
+    flex: none;
+    width: 100%;
+    height: 400px;
+    flex-flow: row nowrap;
+  }
+
+  .mandatory-scroll-snapping {
+    scroll-snap-type: x mandatory;
+
+    .item {
+      scroll-snap-align: center;
+      flex: none;
+      width: 350px;
+      margin: 20px;
     }
   }
 }

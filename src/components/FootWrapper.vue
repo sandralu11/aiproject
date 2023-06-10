@@ -9,7 +9,6 @@
       <ul>
         <li><router-link to="/" class="l-fs-80 fs-48 ">首頁</router-link></li>
         <li><router-link to="/price" class="l-fs-80 fs-48 ">定價</router-link></li>
-
       </ul>
     </div>
     <div class="footer">
@@ -19,7 +18,9 @@
         <span>Twitter</span>
         <span>Instagram</span>
       </div>
-      <div id="scrollToTop" class="top">Back to top ↑</div>
+      <div id="scrollToTop" class="top">
+        <a href="#gotop">Back to top ↑</a>
+      </div>
     </div>
   </div>
 </template>

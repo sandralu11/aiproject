@@ -25,9 +25,11 @@ const qalist = [
 @media (min-width: 768px) {
   .faq {
     display: grid;
+
     .title {
       grid-column: 1;
     }
+
     .qa {
       grid-column: 2/4;
     }
